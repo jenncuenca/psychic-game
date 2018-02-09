@@ -1,11 +1,7 @@
     
 // Random Letter Stored as Variable
 
-var randomletter = randomString();
-    var score = "";
-    var loses = "";
-    var attempts = "";
-    var lives = "";
+Math.floor(Math.random() * chars.length) +1;
 
 // Prompt User to guess a letter from A-Z
 
@@ -20,6 +16,12 @@ var randomletter = randomString();
 //Keep track of wins and losses.
 
 
+var randomletter = randomString();
+    var score = "";
+    var loses = "";
+    var attempts = "";
+    var lives = "";
+
     function randomString() {
         var chars = "abcdefghiklmnopqrstuvwxyz";
         var string_length = 1;
@@ -31,3 +33,16 @@ var randomletter = randomString();
         console.log(randomstring);
         return(randomstring);
     }
+
+
+// attempts
+while (attempts != randomLetter){
+    var attempts = prompt ("Please pick a ltter from A-Z")
+    if (counter > maxAttempts) {
+        prompt("You have no more attempts left! Press ok to Play Again")
+    }
+
+    if (attempts === RandomLetter) {
+        prompt("YOU WIN! YOU GUESSED THE CORRECT LETTER!")
+    }
+}
