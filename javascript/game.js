@@ -9,7 +9,6 @@ var guessesMade = [''];
 
 // Function for whenever user presses a key.
 document.onkeyup = function(event){
-debugger
     var userGuess = event.key; // Determine which key was pressed.
 
     // Computer chooses a letter at random from the choices array.
@@ -25,7 +24,6 @@ debugger
 // if user guess is different then user loses (false).
     else if ((userGuess !== computerChoice) && (userGuessesLeft > 1)) {
     userGuessesLeft -= 1; // guesses left decrease.
-    
 }
 
 // losses recorded and guesses left.
@@ -34,22 +32,12 @@ debugger
         userGuessesLeft = 10;
 }
 
-// User guesses recorded
-guessesMade.push=(event.key);
-
 //Document prints to HTML
 document.getElementById("wins").innerHTML = "Wins: " + userWins; // wins
 document.getElementById("losses").innerHTML = "Losses: " + userLosses; // losses
 document.getElementById("maxGuesses").innerHTML = "Guesses Left: " + userGuessesLeft; // guesses left
-document.getElementById("guesses").innerHTML = "Your guesses so far: "+ guessesMade; // letters guessed
+document.getElementById("guesses").innerHTML = "Your guesses so far: "+ userGuess; // letters guessed
 
 }
 
 //Game Resets
-
-
-
-
-
-
-//If user guess correctly, reveal the correct letter and how many attempts it took.
