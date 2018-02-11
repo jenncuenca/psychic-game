@@ -5,12 +5,13 @@ var choices=["a", "b", "c", "d", "e", "f", "g", "h", "i", "k","l", "m", "n", "o"
 var userWins = 0;
 var userLosses = 0;
 var userGuessesLeft=10;
-var guessesMade = [''];
+var guessesMade = [];
 
 // Function for whenever user presses a key.
 document.onkeyup = function(event){
     var userGuess = event.key; // Determine which key was pressed.
-
+    // User guesses recorded
+     guessesMade.push(event.key);
     // Computer chooses a letter at random from the choices array.
     var computerChoice = choices[Math.floor(Math.random() * choices.length)];
     
@@ -36,7 +37,7 @@ document.onkeyup = function(event){
 document.getElementById("wins").innerHTML = "Wins: " + userWins; // wins
 document.getElementById("losses").innerHTML = "Losses: " + userLosses; // losses
 document.getElementById("maxGuesses").innerHTML = "Guesses Left: " + userGuessesLeft; // guesses left
-document.getElementById("guesses").innerHTML = "Your guesses so far: "+ userGuess; // letters guessed
+document.getElementById("guesses").innerHTML = "Your guesses so far: "+ guessesMade // letters guessed
 
 }
 
