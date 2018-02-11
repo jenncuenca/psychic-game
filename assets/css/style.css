@@ -1,0 +1,30 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Special Elite', cursive;
+}
+
+#heading {
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer */
+    height: 60px;
+    background-color: #e7e7e7;
+    text-align: center;
+    margin-top: 5%;
+  }
