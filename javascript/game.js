@@ -15,16 +15,14 @@ document.onkeyup = function(event){
     var computerChoice = choices[Math.floor(Math.random() * choices.length)];
     // User guesses recorded
     guessesMade.push(event.key);
-    
+
 // if user guess is same as computer choice then user wins (true).
     if (userGuess === computerChoice){
         userWins += 1; // wins increases by 1.
-        userGuesses: 10; // guesses user has stays the same.
+        userGuessesLeft: 10; // guesses user has stays the same.
         alert("Congratulations! You Guessed Correctly! " + "I was thinking of the Letter: " + computerChoice); // informs user of win
         guessesMade= []; // guesses made get reset
     }
-
-
 
 // if user guess is different then user loses (false).
     else if ((userGuess !== computerChoice) && (userGuessesLeft > 1)) {
@@ -41,8 +39,8 @@ document.onkeyup = function(event){
 //Document prints to HTML
 document.getElementById("wins").innerHTML = "Wins: " + userWins; // wins
 document.getElementById("losses").innerHTML = "Losses: " + userLosses; // losses
-document.getElementById("maxGuesses").innerHTML = "Guesses Left: " + userGuessesLeft; // guesses left
-document.getElementById("guesses").innerHTML = "Your Guesses so far: " + guessesMade;
+document.getElementById("maxGuesses").innerHTML = "Guesses Left: " + userGuessesLeft; // amount of guesses left
+document.getElementById("guesses").innerHTML = "Your guesses so far: " + guessesMade; // guesses made
 
 }
 
